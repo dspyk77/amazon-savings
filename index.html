@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amazon Saving's</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Amazon logo?</h1>
+      <nav>
+        <a href="#">My landing page</a>
+        <a href="#">More web apps</a>
+      </nav>
+    </header>
+    <main class="padding-10">
+      <section>
+        <p>
+          Do you ever wonder how much money you could save by getting the Amazon credit card?
+          Do you want to find out?
+        </p>
+        <p>Why dont we give it a try?</p>
+      </section>
+      <section class="d-flex">
+        <p>
+          In the boxes below, enter your current credit card's cash back percentage and how much money you spend
+          through amazon every month.
+        </p>
+        <br>
+        <div class="padding-10">
+          <label for="userPercent">What is your current card's cash back percentage?</label>
+          <input type="number" id="userPercent" placeholder="*%" min=".01" max=".05">
+        </div>
+        <div class="padding-10">
+          <label for="userMoneySpent">How much money do you spend on Amazon every month?</label>
+          <input type="number" id="userMoneySpent" placeholder="$500, $50,000" min="1">
+        </div>
+        <button onclick="calculate()" id="showResult" class="margin-10">See Results</button>
+      </section>
+      <section>
+        <table>
+          <tr>
+            <th>Time Frame</th>
+            <th>Saving's</th>
+          </tr>
+          <tr>
+            <td>1 mo</td>
+            <td id="one-month"></td>
+          </tr>
+          <tr>
+            <td>6 mo</td>
+            <td id="six-month"></td>
+          </tr>
+          <tr>
+            <td>1 year</td>
+            <td id="one-year"></td>
+          </tr>
+          <tr>
+            <td>3 years</td>
+            <td id="three-year"></td>
+          </tr>
+          <tr>
+            <td>5 years</td>
+            <td id="five-year"></td>
+          </tr>
+          <tr>
+            <td>10 years</td>
+            <td id="ten-year"></td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <p class="italic">
+          Disclaimer, this page is in no way conneted to Amazon. 
+          This is purly a calculator and pertains to any credit card with cash back.
+          This is in no way shape or form anykind of financial advise. 
+          For any financial advise please contact a licenced CPA.
+        </p>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./assets/script.js" async defer></script>
+  </body>
+
+</html>
