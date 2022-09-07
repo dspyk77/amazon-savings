@@ -6,7 +6,7 @@
   margin: 10px;
 }
 
-.d-felx {
+.d-flex {
   display: flex;
 }
 
@@ -14,3 +14,12 @@
   font-style: italic;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}

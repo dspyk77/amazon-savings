@@ -26,51 +26,71 @@
         </p>
         <p>Why dont we give it a try?</p>
       </section>
-      <section class="d-flex">
+      <section class="d-flex flex-col margin-10">
         <p>
           In the boxes below, enter your current credit card's cash back percentage and how much money you spend
           through amazon every month.
         </p>
         <br>
         <div class="padding-10">
-          <label for="userPercent">What is your current card's cash back percentage?</label>
-          <input type="number" id="userPercent" placeholder="*%" min=".01" max=".05">
+          <label for="input-percent">
+            What is your current card's cash back percentage?
+          </label>
+          0%<input onchange="inputPercentSelected()" type="range" id="input-percent" min="0" max="15" value="0">
+          <span id="input-percent-display">
+            <!-- sellected percentage rate -->
+            15%
+          </span>
         </div>
         <div class="padding-10">
-          <label for="userMoneySpent">How much money do you spend on Amazon every month?</label>
-          <input type="number" id="userMoneySpent" placeholder="$500, $50,000" min="1">
+          <label for="input-money-spent">How much money do you spend on Amazon every month?</label>
+          $<input type="number" id="input-money-spent" step="100" min="100">
         </div>
-        <button onclick="calculate()" id="showResult" class="margin-10">See Results</button>
       </section>
+      <button onclick="calculate()" id="showResult" class="margin-10">See Results</button>
       <section>
         <table>
           <tr>
             <th>Time Frame</th>
-            <th>Saving's</th>
+            <th>Current Saving's</th>
+            <th>Saving's with Amazon</th>
+            <th>Additional Savings</th>
           </tr>
           <tr>
             <td>1 mo</td>
-            <td id="one-month"></td>
+            <td>$<span id="one-month">0</span></td>
+            <td>$<span id="one-month-am">0</span></td>
+            <td>$<span id="one-month-ad">0</span></td>
           </tr>
           <tr>
             <td>6 mo</td>
-            <td id="six-month"></td>
+            <td>$<span id="six-month">0</span></td>
+            <td>$<span id="six-month-am">0</span></td>
+            <td>$<span id="six-month-ad">0</span></td>
           </tr>
           <tr>
             <td>1 year</td>
-            <td id="one-year"></td>
+            <td>$<span id="one-year">0</span></td>
+            <td>$<span id="one-year-am">0</span></td>
+            <td>$<span id="one-year-ad">0</span></td>
           </tr>
           <tr>
             <td>3 years</td>
-            <td id="three-year"></td>
+            <td>$<span id="three-year">0</span></td>
+            <td>$<span id="three-year-am">0</span></td>
+            <td>$<span id="three-year-ad">0</span></td>
           </tr>
           <tr>
             <td>5 years</td>
-            <td id="five-year"></td>
+            <td>$<span id="five-year">0</span></td>
+            <td>$<span id="five-year-am">0</span></td>
+            <td>$<span id="five-year-ad">0</span></td>
           </tr>
           <tr>
             <td>10 years</td>
-            <td id="ten-year"></td>
+            <td>$<span id="ten-year">0</span></td>
+            <td>$<span id="ten-year-am">0</span></td>
+            <td>$<span id="ten-year-ad">0</span></td>
           </tr>
         </table>
       </section>
