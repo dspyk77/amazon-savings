@@ -1,25 +1,83 @@
+/* ===== spacing ===== */
 .padding-10 {
   padding: 10px;
+}
+
+.page-margin {
+  margin: 25px 50px;
 }
 
 .margin-10 {
   margin: 10px;
 }
-
+/* ===== flex ===== */
 .d-flex {
   display: flex;
 }
 
-.italic {
-  font-style: italic;
+.center-items {
+  align-items: center;
+}
+
+.center-content {
+  justify-content: center;
 }
 
 .flex-col {
   flex-direction: column;
 }
+/* ===== font ===== */
+.italic {
+  font-style: italic;
+}
 
+.font-malayalam {
+  font-family: "Noto Sans Malayalam", sans-serif;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+/* ===== header ===== */
+.header-img {
+  max-width: 200px;
+}
+.header-font {
+  font-family: "Noto Sans Malayalam", sans-serif;
+  font-size: 43px;
+}
+/* ===== element styling ===== */
 table,
 th,
 td {
   border: 1px solid;
+}
+
+.table-hover tr:not(:first-child):hover {
+  background-color: #615b5bb2;
+}
+
+main {
+  border: 5px solid;
+  background-color: rgba(241, 233, 233, 0.438);
+}
+/* ===== nav ===== */
+nav {
+  display: flex;
+  background-color: #333;
+  margin-bottom: 5px;
+}
+/* Navbar links - float: left removed, replaced with display: inline-flex;
+  flex-direction: row;*/
+nav a {
+  display: inline-flex;
+  flex-direction: row;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Links - change color on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
 }

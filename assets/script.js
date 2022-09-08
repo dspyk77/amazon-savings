@@ -1,59 +1,60 @@
-var inputPercent = document.querySelector("#input-percent")
-var moneySpent = document.querySelector("#input-money-spent")
-var inputPercentDisplay = document.querySelector("#input-percent-display")
+var inputPercent = document.querySelector("#input-percent");
+var moneySpent = document.querySelector("#input-money-spent");
+var inputPercentDisplay = document.querySelector("#input-percent-display");
 // ===================================================
-var oneMonthIn = document.querySelector("#one-month")
-var sixMonthIn = document.querySelector("#six-month")
-var oneYearIn = document.querySelector("#one-year")
-var threeYearIn = document.querySelector("#three-year")
-var fiveYearIn = document.querySelector("#five-year")
-var tenYearIn = document.querySelector("#ten-year")
+var oneMonthIn = document.querySelector("#one-month");
+var sixMonthIn = document.querySelector("#six-month");
+var oneYearIn = document.querySelector("#one-year");
+var threeYearIn = document.querySelector("#three-year");
+var fiveYearIn = document.querySelector("#five-year");
+var tenYearIn = document.querySelector("#ten-year");
 // ==================================================
-var oneMonthAm = document.querySelector("#one-month-am")
-var sixMonthAm = document.querySelector("#six-month-am")
-var oneYearAm = document.querySelector("#one-year-am")
-var threeYearAm = document.querySelector("#three-year-am")
-var fiveYearAm = document.querySelector("#five-year-am")
-var tenYearAm = document.querySelector("#ten-year-am")
+var oneMonthAm = document.querySelector("#one-month-am");
+var sixMonthAm = document.querySelector("#six-month-am");
+var oneYearAm = document.querySelector("#one-year-am");
+var threeYearAm = document.querySelector("#three-year-am");
+var fiveYearAm = document.querySelector("#five-year-am");
+var tenYearAm = document.querySelector("#ten-year-am");
 // ====================================================
-var oneMonthAd = document.querySelector("#one-month-ad")
-var sixMonthAd = document.querySelector("#six-month-ad")
-var oneYearAd = document.querySelector("#one-year-ad")
-var threeYearAd = document.querySelector("#three-year-ad")
-var fiveYearAd = document.querySelector("#five-year-ad")
-var tenYearAd = document.querySelector("#ten-year-ad")
+var oneMonthAd = document.querySelector("#one-month-ad");
+var sixMonthAd = document.querySelector("#six-month-ad");
+var oneYearAd = document.querySelector("#one-year-ad");
+var threeYearAd = document.querySelector("#three-year-ad");
+var fiveYearAd = document.querySelector("#five-year-ad");
+var tenYearAd = document.querySelector("#ten-year-ad");
 // ======================================================
 
 function inputPercentSelected() {
-  inputPercentDisplay.innerHTML = "You have selected " + inputPercent.value + "%"
+  inputPercentDisplay.innerHTML =
+    "You have selected " + inputPercent.value + "%";
 }
 
 function calculate() {
-  var intrestRate = inputPercent.value / 100 //intrestRate is now able to be used to calculate
-  var moneySavedCurrent = intrestRate * moneySpent.value // moneySavedCurrent holds the value of user's current cash back
-  var moneySavedAm = .05 * moneySpent.value // moneySavedAm holds the value of how much user saves w/ amazon
-  var additionalMoneySaved = moneySavedAm - moneySavedCurrent // additionalMoneySaved holds users additional savings w/ amazon
+  var intrestRate = inputPercent.value / 100; //intrestRate is now able to be used to calculate
+  var moneySavedCurrent = intrestRate * moneySpent.value; // moneySavedCurrent holds the value of user's current cash back
+  var moneySavedAm = 0.05 * moneySpent.value; // moneySavedAm holds the value of how much user saves w/ amazon
+  var additionalMoneySaved = moneySavedAm - moneySavedCurrent; // additionalMoneySaved holds users additional savings w/ amazon
   // =============================================
-  oneMonthIn.innerHTML = moneySavedCurrent
-  sixMonthIn.innerHTML = moneySavedCurrent * 6
-  oneYearIn.innerHTML = moneySavedCurrent * 12
-  threeYearIn.innerHTML = moneySavedCurrent * 12 * 3
-  fiveYearIn.innerHTML = moneySavedCurrent * 12 * 5
-  tenYearIn.innerHTML = moneySavedCurrent * 12 * 10
+  oneMonthIn.innerHTML = moneySavedCurrent;
+  sixMonthIn.innerHTML = moneySavedCurrent * 6;
+  oneYearIn.innerHTML = moneySavedCurrent * 12;
+  threeYearIn.innerHTML = moneySavedCurrent * 12 * 3;
+  fiveYearIn.innerHTML = moneySavedCurrent * 12 * 5;
+  tenYearIn.innerHTML = moneySavedCurrent * 12 * 10;
   // ==============================================
-  oneMonthAm.innerHTML = moneySavedAm
-  sixMonthAm.innerHTML = moneySavedAm * 6
-  oneYearAm.innerHTML = moneySavedAm * 12
-  threeYearAm.innerHTML = moneySavedAm * 12 * 3
-  fiveYearAm.innerHTML = moneySavedAm * 12 * 5
-  tenYearAm.innerHTML = moneySavedAm * 12 * 10
+  oneMonthAm.innerHTML = moneySavedAm;
+  sixMonthAm.innerHTML = moneySavedAm * 6;
+  oneYearAm.innerHTML = moneySavedAm * 12;
+  threeYearAm.innerHTML = moneySavedAm * 12 * 3;
+  fiveYearAm.innerHTML = moneySavedAm * 12 * 5;
+  tenYearAm.innerHTML = moneySavedAm * 12 * 10;
   // ================================================
-  oneMonthAd.innerHTML = additionalMoneySaved
-  sixMonthAd.innerHTML = additionalMoneySaved * 6
-  oneYearAd.innerHTML = additionalMoneySaved * 12
-  threeYearAd.innerHTML = additionalMoneySaved * 12 * 3
-  fiveYearAd.innerHTML = additionalMoneySaved * 12 * 5
-  tenYearAd.innerHTML = additionalMoneySaved * 12 * 10
+  oneMonthAd.innerHTML = additionalMoneySaved;
+  sixMonthAd.innerHTML = additionalMoneySaved * 6;
+  oneYearAd.innerHTML = additionalMoneySaved * 12;
+  threeYearAd.innerHTML = additionalMoneySaved * 12 * 3;
+  fiveYearAd.innerHTML = additionalMoneySaved * 12 * 5;
+  tenYearAd.innerHTML = additionalMoneySaved * 12 * 10;
 }
 
 //  Working func first attempt needs clean up

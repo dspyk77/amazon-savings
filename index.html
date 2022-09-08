@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html class="page-margin">
 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amazon Saving's</title>
+    <title>Amazing Saving's</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@700&family=Poppins:wght@300&display=swap"
+      rel="stylesheet">
   </head>
 
   <body>
     <header>
-      <h1>Amazon logo?</h1>
-      <nav>
+      <div class="d-flex center-items center-content">
+        <img class="header-img"
+          src="https://i.etsystatic.com/34707104/r/il/6ef2c9/3885209399/il_794xN.3885209399_3jbz.jpg">
+        <h1 class="header-font">savings</h1>
+      </div>
+      <nav class="font-malayalam">
         <a href="#">My landing page</a>
-        <a href="#">More web apps</a>
+        <a href="https://dspyk77.github.io/full-stack-course/projects/index.html" target="_blank">More web apps</a>
       </nav>
     </header>
-    <main class="padding-10">
+    <main class="padding-10 font-poppins">
       <section>
         <p>
           Do you ever wonder how much money you could save by getting the Amazon credit card?
@@ -28,29 +37,33 @@
       </section>
       <section class="d-flex flex-col margin-10">
         <p>
-          In the boxes below, enter your current credit card's cash back percentage and how much money you spend
-          through amazon every month.
+          On the slider below, select your current credit card's cash back percentage.
+          Then fill in how much money you spend through amazon every month.
+          After that the page will automaticly calculate your possible saving!
+          Or if if you prefer you can click the See Results button to, well... see the results!
         </p>
         <br>
         <div class="padding-10">
           <label for="input-percent">
             What is your current card's cash back percentage?
           </label>
-          0%<input onchange="inputPercentSelected()" type="range" id="input-percent" min="0" max="15" value="0">
-          <span id="input-percent-display">
-            <!-- sellected percentage rate -->
-            15%
-          </span>
+          <div>
+            0%<input onchange="inputPercentSelected()" type="range" id="input-percent" min="0" max="15" value="0">
+            <span id="input-percent-display">
+              <!-- sellected percentage rate -->
+              15%
+            </span>
+          </div>
         </div>
         <div class="padding-10">
-          <label for="input-money-spent">How much money do you spend on Amazon every month?</label>
-          $<input type="number" id="input-money-spent" step="100" min="100">
+          <label for="input-money-spent">If you had to guess, how much money do you spend on Amazon every month?</label>
+          $<input onchange="calculate()" type="number" id="input-money-spent" step="100" min="100">
         </div>
       </section>
       <button onclick="calculate()" id="showResult" class="margin-10">See Results</button>
       <section>
-        <table>
-          <tr>
+        <table class="table-hover">
+          <tr class="font-malayalam">
             <th>Time Frame</th>
             <th>Current Saving's</th>
             <th>Saving's with Amazon</th>
@@ -94,17 +107,14 @@
           </tr>
         </table>
       </section>
-      <section>
-        <p class="italic">
-          Disclaimer, this page is in no way conneted to Amazon. 
-          This is purly a calculator and pertains to any credit card with cash back.
-          This is in no way shape or form anykind of financial advise. 
-          For any financial advise please contact a licenced CPA.
-        </p>
-      </section>
     </main>
     <footer>
-
+      <p class="italic">
+        Disclaimer, this page is in no way conneted to Amazon.
+        This is purly a calculator and pertains to any credit card with cash back.
+        This is in no way shape or form anykind of financial advise.
+        For any financial advise please contact a licenced CPA.
+      </p>
     </footer>
     <script src="./assets/script.js" async defer></script>
   </body>
