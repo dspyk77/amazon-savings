@@ -4,7 +4,7 @@
 }
 
 .page-margin {
-  margin: 25px 50px; 
+  margin: 25px 50px;
 }
 
 .margin-10 {
@@ -20,7 +20,7 @@
 }
 
 .center-content {
-  justify-content: center
+  justify-content: center;
 }
 
 .flex-col {
@@ -32,17 +32,17 @@
 }
 
 .font-malayalam {
-  font-family: 'Noto Sans Malayalam', sans-serif;
+  font-family: "Noto Sans Malayalam", sans-serif;
 }
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 /* ===== header ===== */
 .header-img {
   max-width: 200px;
 }
 .header-font {
-  font-family: 'Noto Sans Malayalam', sans-serif;
+  font-family: "Noto Sans Malayalam", sans-serif;
   font-size: 43px;
 }
 /* ===== element styling ===== */
