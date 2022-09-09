@@ -17,13 +17,13 @@
 
   <body>
     <header>
-      <div class="d-flex center-items center-content">
+      <div class="d-flex center-items center-content small-vp-header">
         <img class="header-img"
           src="https://i.etsystatic.com/34707104/r/il/6ef2c9/3885209399/il_794xN.3885209399_3jbz.jpg">
         <h1 class="header-font">savings</h1>
       </div>
       <nav class="font-malayalam">
-        <a href="#">My landing page</a>
+        <a href="https://dspyk77.github.io/full-stack-course/" target="_blank">My landing page</a>
         <a href="https://dspyk77.github.io/full-stack-course/projects/index.html" target="_blank">More web apps</a>
       </nav>
     </header>
@@ -38,9 +38,8 @@
       <section class="d-flex flex-col margin-10">
         <p>
           On the slider below, select your current credit card's cash back percentage.
-          Then fill in how much money you spend through amazon every month.
-          After that the page will automaticly calculate your possible saving!
-          Or if if you prefer you can click the See Results button to, well... see the results!
+          Then fill in how much money you spend through Amazon every month.
+          After that the page will automaticly calculate your possible savings!
         </p>
         <br>
         <div class="padding-10">
@@ -48,7 +47,8 @@
             What is your current card's cash back percentage?
           </label>
           <div>
-            0%<input onchange="inputPercentSelected()" type="range" id="input-percent" min="0" max="15" value="0">
+            0%<input onchange="inputPercentSelected(), calculate()" type="range" id="input-percent" min="0" max="15"
+              value="0">
             <span id="input-percent-display">
               <!-- sellected percentage rate -->
               15%
@@ -57,10 +57,9 @@
         </div>
         <div class="padding-10">
           <label for="input-money-spent">If you had to guess, how much money do you spend on Amazon every month?</label>
-          $<input onchange="calculate()" type="number" id="input-money-spent" step="100" min="100">
+          $<input onchange="calculate()" type="number" id="input-money-spent" step="100" min="100" value="100">
         </div>
       </section>
-      <button onclick="calculate()" id="showResult" class="margin-10">See Results</button>
       <section>
         <table class="table-hover">
           <tr class="font-malayalam">
@@ -110,10 +109,9 @@
     </main>
     <footer>
       <p class="italic">
-        Disclaimer, this page is in no way conneted to Amazon.
-        This is purly a calculator and pertains to any credit card with cash back.
-        This is in no way shape or form anykind of financial advise.
-        For any financial advise please contact a licenced CPA.
+        <span class="bold">Disclaimer:</span> this page is in no way connected to Amazon. This is purely a calculator and pertains to any credit
+        card with cash back. This is in no way shape or form any kind of financial advice. For any financial advice
+        please contact a licensed <a onclick="linkToJabezGroup()" href="http://www.jabezgroup.biz/home.php" target="_blank">CPA</a>.
       </p>
     </footer>
     <script src="./assets/script.js" async defer></script>

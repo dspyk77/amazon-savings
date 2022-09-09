@@ -34,8 +34,13 @@
 .font-malayalam {
   font-family: "Noto Sans Malayalam", sans-serif;
 }
+
 .font-poppins {
   font-family: "Poppins", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
 }
 /* ===== header ===== */
 .header-img {
@@ -81,3 +86,15 @@ nav a:hover {
   background-color: #ddd;
   color: black;
 }
+
+/* ===== media ===== */
+/* vp w/ >= 700px */
+@media screen and (max-width: 700px) {
+  .page-margin {
+    margin: 15px 20px;
+  }
+  .small-vp-header {
+    margin-right: 30px;
+  }
+}
+

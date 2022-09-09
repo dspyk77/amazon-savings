@@ -86,3 +86,7 @@ function calculate() {
 //   fiveYearIn.innerHTML = "$" + userMoneySaved5Year
 //   tenYearIn.innerHTML = "$" + userMoneySaved10Year
 // }
+
+function linkToJabezGroup() {
+    alert("The page you are about to view was not made by me.\nJabez group is a licensed Asset Based Lending (ABL) firm.")
+}
