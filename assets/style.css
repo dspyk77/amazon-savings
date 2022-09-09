@@ -7,6 +7,9 @@
   margin: 25px 50px;
 }
 
+.padding-bottom {
+  padding-bottom: 20px;
+}
 .margin-10 {
   margin: 10px;
 }
@@ -95,6 +98,9 @@ nav a:hover {
   }
   .small-vp-header {
     margin-right: 30px;
+  }
+  .small-vp-padding-bottom {
+    padding-bottom: 20px;
   }
 }
 
